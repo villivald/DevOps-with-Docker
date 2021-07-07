@@ -1,0 +1,16 @@
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker on git:main o [19:04:46] 
+$ docker run -d -it --name secret devopsdockeruh/simple-web-service:ubuntu
+e2c536c5bb1746fbe9b06e2b2161665d58a4d4a5dceca0b2bce393df0d920c83
+
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker on git:main o [19:04:57] 
+$ docker exec -it secret bash
+root@e2c536c5bb17:/usr/src/app# ls
+server  text.log
+root@e2c536c5bb17:/usr/src/app# cat text.log 
+2021-07-07 16:04:57 +0000 UTC
+2021-07-07 16:04:59 +0000 UTC
+2021-07-07 16:05:01 +0000 UTC
+2021-07-07 16:05:03 +0000 UTC
+2021-07-07 16:05:05 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
