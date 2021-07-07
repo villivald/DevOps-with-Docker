@@ -1,0 +1,23 @@
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker on git:main o [19:18:16] 
+$ docker run -d -it --name missing ubuntu
+95d704f5dd489cf50fe0f1758bbe9ebb6b0c2155516ea0ff93478bc5324e277e
+
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker on git:main o [19:19:13] 
+$ docker exec -it missing bash
+root@95d704f5dd48:/# apt update 
+root@95d704f5dd48:/# apt upgrade
+root@95d704f5dd48:/# apt install curl
+root@95d704f5dd48:/# exit
+
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker on git:main o [19:21:18] 
+$ docker exec -it missing sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
