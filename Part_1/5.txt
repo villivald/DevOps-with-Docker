@@ -25,3 +25,29 @@ $ docker images
 REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
 devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 months ago   83MB
 devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 months ago   15.7MBm
+
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker/Part_1 on git:main o [19:22:17] 
+$ docker run -d -it --name secret devopsdockeruh/simple-web-service:alpine
+a0b6dbedd91e27cc5bd0681d8ad145d3832bb308a3703290d43cbd5a66a0a45b
+
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker/Part_1 on git:main o [19:25:37] 
+$ docker exec -it secret apk add bash
+(1/4) Installing ncurses-terminfo-base (6.2_p20210109-r0)
+(2/4) Installing ncurses-libs (6.2_p20210109-r0)
+(3/4) Installing readline (8.1.0-r0)
+(4/4) Installing bash (5.1.0-r0)
+Executing bash-5.1.0-r0.post-install
+Executing busybox-1.32.1-r6.trigger
+OK: 8 MiB in 18 packages
+
+# mv @ MacBook-Pro-Maxim in ~/Developer/DevOps-with-Docker/Part_1 on git:main o [19:25:44] 
+$ docker exec -it secret bash                          
+bash-5.1# tail -f ./text.log
+2021-07-10 16:25:54 +0000 UTC
+2021-07-10 16:25:56 +0000 UTC
+2021-07-10 16:25:58 +0000 UTC
+2021-07-10 16:26:00 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+^C
+bash-5.1# exit
+exit
