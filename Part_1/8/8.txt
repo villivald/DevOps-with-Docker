@@ -1,0 +1,19 @@
+➜  8 git:(main) ✗ docker build . -t curler
+[+] Building 9.9s (11/11) FINISHED
+....
+....
+ => => exporting layers                                                                                                    0.2s 
+ => => writing image sha256:65514f79ea7a25208af1fd366219f02369754655870376f78097109add3aee66                               0.0s 
+ => => naming to docker.io/library/curler
+
+➜  8 git:(main) ✗ docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
