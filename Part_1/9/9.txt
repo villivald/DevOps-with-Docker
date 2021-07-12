@@ -1,0 +1,15 @@
+DevOps-with-Docker/Part_1/9 on  main 
+➜ touch text.log
+
+DevOps-with-Docker/Part_1/9 on  main [?] 
+➜ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^C%                                                                             
+DevOps-with-Docker/Part_1/9 on  main [?] took 5s 
+➜ cat text.log 
+2021-07-12 17:22:35 +0000 UTC
+2021-07-12 17:22:37 +0000 UTC
+2021-07-12 17:22:39 +0000 UTC
