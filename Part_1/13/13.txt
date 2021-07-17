@@ -1,0 +1,15 @@
+➜  13 git:(main) git clone git@github.com:docker-hy/material-applications.git
+
+➜  13 git:(main) ✗ cd material-applications/example-backend
+
+➜  example-backend git:(main) ✗ docker build . -t go-app
+
+➜  example-backend git:(main) ✗ docker run -p 8080:8080 go-app
+...
+[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
+[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
+[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2021/07/17 - 19:34:14 | 404 |     113.132µs |      172.17.0.1 | GET      "/"
+[GIN] 2021/07/17 - 19:34:14 | 404 |      22.399µs |      172.17.0.1 | GET      "/favicon.ico"
+[GIN] 2021/07/17 - 19:34:19 | 200 |      11.493µs |      172.17.0.1 | GET      "/ping"
